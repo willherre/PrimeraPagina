@@ -1,0 +1,596 @@
+/* Reseteo universal font squirrel*/
+
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+article,figcaption,figure,footer,header,hgroup,nav,section{
+display: block;
+}
+
+@font-face {
+    font-family: 'Chalet';
+    src: url('../fonts/Chalet');
+    src: url('../fonts/Chalet.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chalet.woff') format('woff'),
+         url('../fonts/Chalet.ttf') format('truetype'),
+         url('../fonts/Chalet.svg#Chalet') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pecita';
+    src: url('../fonts/Pecita');
+    src: url('../fonts/Pecita.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Pecita.woff') format('woff'),
+         url('../fonts/Pecita.ttf') format('truetype'),
+         url('../fonts/Pecita.svg#Pecita') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+background: #212121 url(../img/fondo.jpg);
+color: #FFF;
+/*fuente principal y fuentes secundarias en caso de no encontrar la principal*/
+font-family: "Chalet",Helvetica,Verdana;
+font-size: 0.95em;
+}
+
+a{
+	color:#57b864;
+	font-weight: bold;
+	text-decoration: none;
+}
+/* evento de pasar el mouse en los link*/
+a:hover{
+	color: #F60;
+}
+
+audio, iframe,img , video{
+	max-width: 100%;
+	border-radius: 0.5em;
+}
+
+	fieldset{
+
+		border: .1em solid #F60;
+		border-radius: .5em;
+		padding: 1em;
+		margin: .5em;
+		padding: .5em;
+	}
+
+figcaption{
+	font-size: :0.85em;
+	padding: 0.25em;
+	text-align: center;
+}
+
+form{
+
+	width: 100%;
+}
+
+form div{
+
+	margin: .5em;
+
+}
+h2 ,h3{
+color: #f90;
+max-width: 100%;
+font-family: "Pecita";
+
+}
+
+h3{
+
+	background: #E2E7F1;
+	border-radius: 1em;
+	box-shadow: .25em .25em .25em rgba(255,153,0,.5);
+	margin-bottom: .5em;
+	padding-left: .5em;+
+	text-align: center;
+}
+
+hr{
+border:1px dashed #FFF;
+margin: 1em 0;
+
+}
+
+iframe{
+
+	border-radius: .5em;
+}
+
+input[type="email"],input[type="text"],textarea{
+
+	background: #EEE;
+	border-radius: .25em;
+	color: #F60;
+	font-size: 1em;
+	padding: .25em;
+	width: 95%;
+
+}
+input[type="email"]:focus,input[type="text"]:focus,textarea:focus{
+	background:#C6ECF9;
+	
+	}
+
+
+input[type="submit"]{
+	background: #F90;
+	border-radius: 0 0.25em;
+	color: #500;
+	font-family: "chalet";
+	font-size: 1.25em;
+	padding: .25em;
+
+}
+/*imagenes y objetos flexobles */
+input[type="submit"]:hover{
+	background: #7BBFD5;
+	border-radius: .25em 0;
+	color: #000;
+	cursor: pointer;
+
+}
+
+label{
+
+	cursor: pointer;
+}
+
+legend{
+
+	color:#F90;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+ol{
+	padding: 0.2em;
+
+}
+
+ol li{
+	margin-left: 1.2em;
+	padding: 1em 0;
+}
+
+
+textarea{
+	resize:none;
+
+}
+header,section#contenido,footer{
+	background: #FFF url(../img/fondo-interno.jpg);
+	/* centrar contenido en la pagina*/
+	margin: 0 auto;
+	/*para dejar un 5% a cada lado*/
+	max-width: 90%;
+	text-align: center;
+}
+
+header h1,nav {
+	/*para que combiban al misma altura*/
+	display: inline-block;
+	/*el 100% pero en el header*/
+	max-width: 100%;
+	/*a la mitad del objeto que comparte el ancho*/
+	vertical-align: middle;
+}
+
+
+nav ul{
+list-style: :none;
+}
+
+nav li,ul#catalogo li{
+display: inline-block;
+padding: 0.1em;
+vertical-align: top;
+}
+ul#catalogo li{
+display: inline-block;
+vertical-align: top
+}
+nav a {
+	background: #FFF;
+	border: 0.1em solid #57ABB8;
+	/* redondear cuadros*/
+	border-radius: 0.25em;
+	color: #F60;
+	display: block;
+	font-family: "Pecita",Helvetica,Verdana;
+	font-size: 1.4em;
+	padding: 0.2em;
+	/* se van aplicar todas la propiedaades de transicion */
+	/* microsoft*/
+	-ms-transition: all 0.5s ease-in ;
+	/* mozilla*/
+	-moz-transition: all 0.5s ease-in ;
+	/* opera*/
+	-o-transition: all 0.5s ease-in ;
+	/* safari-chrome*/
+	-webkit-transition: all 0.5s ease-in ;
+	transition: all 0.5s ease-in ;
+}
+
+nav a:hover{
+	background: #212121;
+	border: 0.1em dashed #F60;
+	/*se especifica los bordes desde la esquina superior izquierda*/
+	border-radius: 0 0.5em 0 0.5em;
+	color: #FFF;
+	-ms-transition: all 0.5s ease-out ;
+	/* mozilla*/
+	-moz-transition: all 0.5s ease-out ;
+	/* opera*/
+	-o-transition: all 0.5s ease-out ;
+	/* safari-chrome*/
+	-webkit-transition: all 0.5s ease-out ;
+	transition: all 0.5s ease-out ;
+}
+
+/* Otro efecto css
+nav a:hover {
+	border: 1px solid #F90;
+	-moz-border-radius: 0px 50px 0px 50px;
+    -webkit-border-radius: 0px 50px 0px 50px;
+    border-radius: 0px 50px 0px 50px;
+    -webkit-transition: all 0.8s ease-out;
+	-moz-transition: all 0.8s ease-out;
+	-o-transition: all 0.8s ease-out;
+	transition: all 0.8s ease-out;
+}
+*/
+/*los elmentos que compraten un espacio solo pueden sumar un 95%*/
+section#principal, aside{
+	background: #1E6381;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 65%;
+	vertical-align: top;
+}
+
+aside {
+	width: 30%;
+}
+
+
+article#descripcion-acerca, article#multimedia-acerca{
+	background: #1E6381;	
+	border-radius: .5em;
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 100%;
+	min-height: 543px;
+	padding:  .5em;
+	text-align: justify;
+	vertical-align: top;
+	width: 55%;
+}
+article#multimedia-acerca{
+
+	width: 40%;
+
+}
+
+section#servicios-principal, section#servicios-tipos{
+	margin: 0 auto;
+	max-width: 95%;
+
+
+}
+
+
+
+
+
+
+ #img-servicios , article#nuestros-servicios{
+
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+
+article#nuestros-servicios,article#servicio1,article#servicio2,article#servicio3{
+
+	background: #1E6381;	
+	border-radius: .5em;
+	min-height: 300px;
+	width: 55%;
+	padding:  .5em;
+	max-width: 100%;
+	text-align: justify;
+}
+
+article#nuestros-servicios h2,article#servicio1 h3,article#servicio2 h3,article#servicio3 h3{
+
+text-align: center;
+
+}
+
+article#servicio1,article#servicio2,article#servicio3{
+	background: #011E30;	
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	margin-bottom: 0.5;
+}
+
+article#descripcion-acerca h2{
+
+	text-align: center;
+}
+
+article#principal, aside {
+	background: #1E6381;
+	border-radius: 0.5em;
+	display: inline-block;;
+	max-width: 0 auto;
+	max-width: 100%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 65%;
+}
+
+article#galeria-inicio {
+
+	border-radius: 0.5em;
+	padding: 0.5em;
+	text-align: :left;
+	width: 95%;
+}
+
+
+aside{
+width: 30%;
+}
+
+aside img {
+	border-radius: :0.5em;
+}
+
+
+article#servicio1 div , article#servicio2{
+
+	text-align: center;
+}
+
+section#trabajos{
+
+	background: #011E30;
+	border-radius: .5em;
+	margin: 0 auto;
+	max-width: 80%;
+	padding: .5em;
+	text-align: center;
+	
+}
+
+div.portafolio article{
+	display: inline;
+	padding: 1em;
+
+}
+
+
+div.portafolio{
+
+	margin: 2em auto; 
+}
+
+section#contacto, section#mapa{
+
+	background: #011E30;
+	border-radius: .5em;
+	display: inline-block;
+	margin: 0 auto;
+	min-height: 350px;
+	padding: .5em;
+	text-align: justify;
+	vertical-align: top;
+	width: 45%;
+
+
+}
+
+article#info-contacto{
+
+	border: .1em solid #1E6381;
+	border-radius:.5em;
+	margin: .5em;
+	min-height: :144px;
+	padding: .5em; 
+}
+
+span.datos-contacto{
+
+	color:#F90;
+	margin-left: 1em;
+}
+footer{
+color: #000;
+font-size: 0.7em;
+padding: :0.75em 0;
+}
+
+
+
+.fade {
+	opacity: 1;
+	filter:alpha(opacity=10);
+	-ms-transition: all 0.5s ease-out ;
+	/* mozilla*/
+	-moz-transition: all 0.5s ease-out ;
+	/* opera*/
+	-o-transition: all 0.5s ease-out ;
+	/* safari-chrome*/
+	-webkit-transition: all 0.5s ease-out ;
+	transition: all 0.5s ease-out ;
+	
+
+}
+
+.fade:hover {
+	opacity: 0.7;
+	filter:alpha(opacity=7);
+	-ms-transition: all 0.5s ease-out ;
+	/* mozilla*/
+	-moz-transition: all 0.5s ease-out ;
+	/* opera*/
+	-o-transition: all 0.5s ease-out ;
+	/* safari-chrome*/
+	-webkit-transition: all 0.5s ease-out ;
+	transition: all 0.5s ease-out ;
+}
+
+.redonda{
+/* 1 em =*/
+	border-radius: 50px;
+}
+
+
+
+/*Condicionales media query*/
+/* 1081 hacia arriba*/
+@media (min-width:1081px){
+
+	header h1{
+	text-align: left;
+	width:35%;
+
+	}
+	nav{
+		text-align: right;
+		width: 60%;
+	}
+}
+
+/*ancho maximo de 1080*/
+@media (max-width:900px){
+
+	nav li{
+	font-size: 1.3em;
+
+	}
+	article#galeria-inicio{
+		width: 90%;
+	}
+	aside{
+		width: 20%
+	}
+	article#descripcion-acerca, article#multimedia-acerca,#img-servicios,article#nuestros-servicios{
+	
+		width: 45%;
+	}
+
+	article#servicio1,article#servicio2,article#servicio3{
+
+		width: 30%;
+	}
+
+	section#trabajos{
+
+		max-width: 90%;
+
+	}
+	div.portafolio article{
+		padding: .5em;
+
+	}
+	form{
+
+		width: 95%;
+	}
+
+	}
+	
+
+@media (max-width:800px){
+
+	nav li{
+	font-size: 0.90em;
+
+	}
+	article#galeria-inicio{
+		width: 88%;
+	}
+
+	#img-servicios, article#nuestros-servicios, article#servicio1{
+		display: block;
+		margin-bottom: 0 0 0.25em ;
+		width: 95%;
+
+	}
+
+	section#trabajos{
+
+		max-width: 95%;
+	}
+
+	div.portafolio article{
+	padding: .2em;
+
+	}
+	
+	section#contacto,section#mapa{
+
+		display: block;
+		width: 95%;
+	}
+	section#contacto{
+		margin-bottom: .5em;
+	}
+	form{
+
+		width: 100%;
+	}
+
+}
+
+@media (max-width:600px){
+
+	nav li{
+		display: inline-block;
+		margin: 0px;
+		width: 98%;
+
+		}
+	
+	section#principal , article#descripcion-acerca ,article#servicio2{
+	
+	margin-bottom: 0.2em;
+	
+		}
+
+	
+	section#principal, aside , article#descripcion-acerca,article#multimedia-acerca,article#servicio2,article#servicio3{
+
+	
+	
+		display: block;
+		width: 95%;
+		
+	}
+
+	#img-servicios{
+
+		display: none;
+	}
+
+}
+

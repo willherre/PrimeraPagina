@@ -1,0 +1,16 @@
+/* Mi primera pagina - */
+
+/* TEAM */
+   Creator: Wilson Leonidas Herrera Cespedes
+   Contact: wicho716 [at]hotmail.com
+   From: Ibague,Colombia	
+
+/* THANKS */
+
+
+/* SITE */
+   Last Update:
+   Language:Español
+   Components:Jquery
+   Software:		
+	

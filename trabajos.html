@@ -1,0 +1,309 @@
+<DOCTYPE html>
+<html lang="es">
+
+<HEAD>
+	<meta charset ="utf=8">
+	<title>  Sitio con Resposive web Desing en HTML5, CSS3 y jQuery . Catalogo</title>
+	<meta name ="description" content="Bienvenido a mi portafolio web hecho en HTML5,CSS3 y jQuery con Responsive web Desing"/>
+	<meta name="viewport"  content="width,initial-scale=1"/ >
+	<link rel="shorcut icon" type="image/x-icon" href="favicon.ico/">
+	<link rel="author" type="text/plain" href="humans.txt"/>
+	 <link rel='stylesheet'  type='text/css'  href='css/jquery.fancybox.css'/ > 
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+	 <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml"/>
+	<link rel="shortcut icon" href="../favicon.ico"> 
+     <link rel="stylesheet" type="text/css" href="css/style-catalogo.css" />
+		
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.3"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.2" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css" />
+	<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-thumbs.css" />
+	<script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src=".js/jquery.fancybox-media.jss"></script>
+
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>	
+
+	<!--[if it IE 9]>
+	<script  src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</HEAD>
+<BODY>
+
+	<header>
+		<h1>
+			<a href="index.html">
+				<img class="fade" alt="texto" src="img/bextlan-logo.png"/>
+				</a>
+		</h1>
+		<nav>
+			<ul >
+				<li> <a  href="index.html">Inicio  </a> </li>
+				<li> <a href="acerca.html">Acerca</a> </li>
+				<li> <a href="servicios.html">Servicios</a> </li>
+				<li> <a href="trabajos.html">Trabajos</a> </li>
+				<li> <a href="contacto.html">Contactos</a> </li>
+			</ul>
+
+		</nav>
+	</header>
+	<section id="contenido">
+		<section id="trabajos" >
+			<h2> Catalogo de Juegos</h2>
+		<div class="portafolio"  >
+			<ul class="tt-wrapper" id="catalogo" >
+				<li  >
+			<article>
+				<a  class="fancybox"  href="img/trabajo1.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo1-mini.png"><span>Call of Duty MW 3</span></a>
+			
+			</article>
+		</li>
+			<article>
+				
+				<li >
+		
+				<a class="fancybox" href="img/trabajo2.png" data-fancybox-group="gallery" class="fade" title="trabajo2" ><img class="fade" src="img/trabajo2-mini.png"><span>Call of Duty MW 2</span></a>
+			
+			</article>
+			<article>
+					<li >
+				<a class="fancybox" href="img/trabajo3.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo3-mini.png"> <span>Call of Duty MW </span></a>
+			</article>
+			<article>
+					<li >
+				<a class="fancybox" href="img/trabajo4.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo4-mini.png"><span>Call of Duty ops 2 </span></a>
+			</article>
+			<article>
+					<li >
+				<a class="fancybox" href="img/trabajo5.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo5-mini.png"><span>Assasin Creed III</span></a>
+			</article>
+			</ul>
+		</div>
+		<div class="portafolio">
+			<ul class="tt-wrapper" id="catalogo" >
+			<article>
+				<li >
+
+
+				<a class="fancybox" href="img/trabajo6.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo6-mini.png"><span> Hitman Absolution</span></a>
+			</article>
+			<article>
+				<li >
+
+				<a class="fancybox" href="img/trabajo7.png" data-fancybox-group="gallery" class="fade" title="trabajo2" ><img class="fade" src="img/trabajo7-mini.png"><span> Mass Efect 3 </span></a>
+			</article>
+
+			<article>
+				<li >
+
+				<a class="fancybox" href="img/trabajo8.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo8-mini.png"><span>Batman Arkam City</span></a>
+			</article>
+			<article>
+				<li >
+
+				<a class="fancybox" href="img/trabajo9.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" class="fade" src="img/trabajo9-mini.png"><span> Crysis 2</span></a>
+			</article>
+			<article>
+				<li >
+
+				<a class="fancybox" href="img/trabajo10.png" data-fancybox-group="gallery" class="fade" title="trabajo1" ><img class="fade" src="img/trabajo10-mini.png"><span> Medal Of Honor Warfigther</span></a>
+			</article>
+		</div>
+	</ul>
+		</section>
+	<footer>
+		Aprendiendo HTML5,CSS3,JQuery y Responsive Web Desig con <a rel="author "href="http://twitter.com/bextlan" target="blank">@bextlan</a>
+
+	</footer>
+</BODY>
+
+</html>

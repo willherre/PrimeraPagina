@@ -1,0 +1,132 @@
+<DOCTYPE html>
+<html lang="es">
+
+<HEAD>
+	<meta charset ="utf=8">
+	<title>  Sitio con Resposive web Desing en HTML5, CSS3 y jQuery</title>
+	<meta name ="description" content="Bienvenido a mi portafolio web hecho en HTML5,CSS3 y jQuery con Responsive web Desing"/>
+	<meta name="viewport"  content="width,initial-scale=1"/ >
+	<link rel="shorcut icon" type="image/x-icon" href="favicon.ico/">
+	<link rel="author" type="text/plain" href="humans.txt"/>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+	 <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml"/>
+	 <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='js/camera.min.js'></script> 
+    
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: true
+			});
+
+			jQuery('#camera_wrap_2').camera({
+				height: '400px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+	<!--[if it IE 9]>
+	<script  src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</HEAD>
+<BODY>
+
+	<header>
+		<h1>
+			<a href="index.html">
+				<img class="fade" alt="texto" src="img/bextlan-logo.png"/>
+				</a>
+		</h1>
+		<nav>
+			<ul >
+				<li> <a  href="index.html">Inicio  </a> </li>
+				<li> <a href="acerca.html">Acerca</a> </li>
+				<li> <a href="servicios.html">Servicios</a> </li>
+				<li> <a href="trabajos.html">Trabajos</a> </li>
+				<li> <a href="contacto.html">Contactos</a> </li>
+			</ul>
+
+		</nav>
+	</header>
+	<section id="contenido">
+		<section id="principal" >
+			<article id="galeria-inicio">
+		<div class="camera_wrap camera_azure_skin " id="camera_wrap_1">
+                <div data-thumb="img/mini1.png"  data-src="img/slide-0.png" data-link="http://www.youtube.com/watch?v=sD4BalLIMz0" data-target="_blank" >
+               
+                <div class="camera_caption moveFromLeft" 
+                >
+                    Mira el nuevo Mangenkyo sharingan
+                </div>
+       </div>
+       <div data-thumb="img/mini2.png" data-src="img/slide-1.png">
+                <div class="camera_caption fadeFromBottom" style="visibility: visible; opacity: 1; bottom: 0px;">
+                    Imagenes  Fansub  de  sasuke !!!
+                </div>
+       </div>
+       		<div data-thumb="img/mini3.png" data-src="img/slide-2.png" data-link="http://www.youtube.			com/watch?v=iif5j4iWfiw" data-target="_blank">
+                <div class="camera_caption fadeFromBottom" style="visibility: visible; opacity: 1; bottom: 0px;">
+                    Ve Online Sasuke vs Danzo
+                </div>
+      				 </div>
+       			<div data-thumb="img/mini4.png" data-src="img/slide-3.png">
+                <div class="camera_caption fadeFromBottom" style="visibility: visible; opacity: 1; bottom: 0px;">
+                    Algunos momentos de sasuke
+                </div>
+       </div>
+        </div>
+			</article>
+
+		</section>
+		
+
+		<aside>
+			<br/> <br/>
+			<!--Twitter -->
+			<script  src="http://platform.twitter.com/widgets.js"></script>
+			<a href="http://twitter.com/share" class="twitter-share-button" data-text="#Sasuke | ejercicio en clase" data-url="http://pruebashtml5.byethost33.com" data-count="vertical"> Twittear</a>
+			
+			<br/> <br/>
+			<!--Facebook -->
+			
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+				<div class="fb-like" data-href="http://www.facebook.com/pages/Sparta/569666189725562?fref=ts" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true" data-font="verdana"></div>
+
+			<!--Publicidad -->
+			<ul class="tt-wrapper" >
+				<li>
+			<a  class="fade" href="http://www.colorhexa.com" target="_blank">
+				<img src="img/logo-geekonos.png" alt="Color Hexa"/><span>Paleta de Colores</span>
+				<figcaption>Color Hexa<figcaption/></a>
+				</li>
+
+				</ul>
+
+		</aside>
+	</section>
+	<footer>
+		Aprendiendo HTML5,CSS3,JQuery y Responsive Web Desig con <a rel="author "href="http://twitter.com/bextlan" target="blank">@bextlan</a>
+
+	</footer>
+</BODY>
+
+</html>
